@@ -57,6 +57,7 @@ The backend exposes a standard JSON-RPC interface and HTTP endpoints simulating 
 - **Sandbox Emulation**: Checks user-submitted script execution pipelines for global namespace or process references.
 
 ---
+<img width="2646" height="1600" alt="Image" src="https://github.com/user-attachments/assets/bf3fd555-f96a-4f0a-9723-6a290aca872d" />
 
 ## 🚀 Setup & Execution
 
