@@ -26,6 +26,7 @@ An open-standard universal bridge that connects AI models directly to your local
 ---
 <img width="943" height="625" alt="Image" src="https://github.com/user-attachments/assets/19912360-8e95-4cb6-ba70-e6cbc21535ce" />
 
+<img width="1004" height="632" alt="Image" src="https://github.com/user-attachments/assets/d6429b18-72a7-4314-a14a-d6e7099e6b8e" />
 ## 🛡️ 3. Security Validation Shield
 
 The real-time firewall and guardrail layer that sits between your AI agents and your infrastructure.
