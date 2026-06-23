@@ -16,6 +16,7 @@ A collaborative ecosystem where specialized AI agents work together as a team ra
 
 ---
 ## 🔌 2. Model Context Protocol (MCP) Server
+<img width="969" height="630" alt="Image" src="https://github.com/user-attachments/assets/4e52f3d0-e08a-48cd-a751-cd8212065271" />
 
 An open-standard universal bridge that connects AI models directly to your local data sources, development environments, and secure APIs.
 
