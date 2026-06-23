@@ -165,6 +165,6 @@ To experience the full capabilities of the multi-agent system, execute the follo
 3. Insert a task with a Title, Priority, and Category, and click **Call add_task**.
 4. The task is validated, registered to the MCP server database, and immediately appears in the corresponding Eisenhower quadrant.
 ### offine work :
-no chatgpt 
+no chatgpt /gemin  
 no api key no need
 useful focus .
