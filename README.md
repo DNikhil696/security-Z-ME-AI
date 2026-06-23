@@ -15,8 +15,6 @@ A collaborative ecosystem where specialized AI agents work together as a team ra
 * ⚡ **Specialization:** One agent might code, another reviews, and a third deploys.
 
 ---
-<img width="943" height="625" alt="Image" src="https://github.com/user-attachments/assets/19912360-8e95-4cb6-ba70-e6cbc21535ce" />
-
 ## 🔌 2. Model Context Protocol (MCP) Server
 
 An open-standard universal bridge that connects AI models directly to your local data sources, development environments, and secure APIs.
@@ -26,6 +24,7 @@ An open-standard universal bridge that connects AI models directly to your local
 * 🔄 **Plug-and-Play:** A single protocol that lets any compliant LLM talk to any compliant data source.
 
 ---
+<img width="943" height="625" alt="Image" src="https://github.com/user-attachments/assets/19912360-8e95-4cb6-ba70-e6cbc21535ce" />
 
 ## 🛡️ 3. Security Validation Shield
 
