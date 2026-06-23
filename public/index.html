@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>security +Z ME AI | Multi-Agent Dashboard</title>
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background glow effects -->
+  <div class="glow-sphere glow-sphere-1"></div>
+  <div class="glow-sphere glow-sphere-2"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-container">
+        <div class="logo-icon">+Z</div>
+        <div class="logo-text">
+          <h1>security +Z ME AI</h1>
+          <span class="sub-logo">ADK MULTI-AGENT SYSTEM</span>
+        </div>
+      </div>
+      
+      <!-- ADK Badge in Center -->
+      <div class="adk-center-logo">
+        <div class="adk-bars">
+          <span class="bar-1"></span>
+          <span class="bar-2"></span>
+          <span class="bar-3"></span>
+        </div>
+        <span class="adk-text">ADK</span>
+      </div>
+      
+      <div class="header-stats">
+        <div class="stat-badge">
+          <span class="dot active"></span>
+          <span class="stat-label">System:</span>
+          <span class="stat-value" id="status-val">ONLINE</span>
+        </div>
+        <div class="stat-badge">
+          <span class="stat-value" id="uptime-val">0s</span>
+        </div>
+        <div class="stat-badge security-badge">
+          <span class="stat-label">Security:</span>
+          <span class="shield-icon-mini">🛡️</span>
+          <span class="stat-value red-text" id="shield-val">SHIELD ACTIVE</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-tab="chat">
+            <span class="nav-icon">💬</span>
+            <span class="nav-text">Agent Console</span>
+          </button>
+          <button class="nav-item" data-tab="matrix">
+            <span class="nav-icon">📋</span>
+            <span class="nav-text">Priority Matrix</span>
+          </button>
+          <button class="nav-item" data-tab="calendar">
+            <span class="nav-icon">📅</span>
+            <span class="nav-text">Daily Calendar</span>
+          </button>
+          <button class="nav-item" data-tab="quizzes">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">Study Decks</span>
+          </button>
+          <button class="nav-item" data-tab="security">
+            <span class="nav-icon">🛡️</span>
+            <span class="nav-text">Security Audits</span>
+          </button>
+        </nav>
+
+        <!-- MCP Registry Widget -->
+        <div class="mcp-widget">
+          <h3>MCP REGISTRY</h3>
+          <div class="mcp-server-box">
+            <div class="mcp-server-header">
+              <span class="dot active"></span>
+              <strong>localhost:3000 (Local Host)</strong>
+            </div>
+            <ul class="mcp-items-list" id="mcp-tools-list">
+              <li>⚙️ add_task</li>
+              <li>⚙️ optimize_schedule</li>
+              <li>⚙️ validate_study_material</li>
+              <li>⚙️ generate_study_deck</li>
+              <li>📄 tasks://list</li>
+              <li>📄 calendar://today</li>
+              <li>📄 security://status</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content-panel">
+        
+        <!-- Tab: Chat Console -->
+        <section class="tab-content active" id="tab-chat">
+          <div class="chat-grid">
+            <div class="chat-main">
+              <div class="panel-header">
+                <h2>Multi-Agent Solver</h2>
+                <p>Input your exam syllabus, schedule requests, or system tasks. Our AI agents will construct and secure your workflow.</p>
+              </div>
+
+              <!-- Live Chat Box -->
+              <div class="chat-history" id="chat-history">
+                <div class="chat-message agent-msg">
+                  <div class="sender-tag">⚡ security +Z ME AI Orchestrator</div>
+                  <div class="msg-body">
+                    Welcome. I am the +Z ME AI multi-agent coordinator. Input your goals below (e.g. <em>"Prepare for my network security quiz and set up local server TLS parameters"</em>). I will safely coordinate between the study, task, and wellness agents using Model Context Protocol tools.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input Area -->
+              <div class="chat-input-container">
+                <div class="input-wrapper-glass">
+                  <textarea id="chat-input" placeholder="Enter goals safely\n(No injection)" rows="2"></textarea>
+                  <span class="input-shield-icon">🛡️</span>
+                </div>
+                <button id="chat-send-btn">Solve Goal</button>
+              </div>
+            </div>
+
+            <!-- Agent Telemetry -->
+            <div class="chat-telemetry">
+              <div class="panel-header">
+                <h2>Agent Telemetry</h2>
+                <div class="live-channel-box">
+                  <span class="pulsing-record">LIVE CHANNELS</span>
+                  <div class="eq-wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="telemetry-log" id="telemetry-log">
+                <div class="telemetry-placeholder">Awaiting execution... Telemetry traces will log here.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Eisenhower Matrix -->
+        <section class="tab-content" id="tab-matrix">
+          <div class="panel-header">
+            <h2>Eisenhower Task Priority Matrix</h2>
+            <p>Task optimization agent orders your items dynamically. Security-critical tasks automatically receive weight boosts.</p>
+          </div>
+
+          <div class="matrix-grid">
+            <div class="matrix-quadrant q1">
+              <div class="quadrant-header">Urgent & Important</div>
+              <ul class="quadrant-list" id="quad-ui"></ul>
+            </div>
+            <div class="matrix-quadrant q2">
+              <div class="quadrant-header">Important & Not Urgent</div>
+              <ul class="quadrant-list" id="quad-inu"></ul>
+            </div>
+            <div class="matrix-quadrant q3">
+              <div class="quadrant-header">Urgent & Not Important</div>
+              <ul class="quadrant-list" id="quad-uni"></ul>
+            </div>
+            <div class="matrix-quadrant q4">
+              <div class="quadrant-header">Not Urgent & Not Important</div>
+              <ul class="quadrant-list" id="quad-nuni"></ul>
+            </div>
+          </div>
+
+          <!-- Quick Add Task form via MCP -->
+          <div class="quick-add-section glass-card">
+            <h3>Direct MCP Command Tool</h3>
+            <form id="mcp-add-task-form" class="mcp-form">
+              <div class="form-group">
+                <label>Task Title</label>
+                <input type="text" id="task-title" required placeholder="e.g. Audit certificate validation">
+              </div>
+              <div class="form-group">
+                <label>Priority</label>
+                <select id="task-priority">
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="task-category">
+                  <option value="Study">Study</option>
+                  <option value="Task">Task</option>
+                  <option value="Wellness">Wellness</option>
+                  <option value="Life">Life</option>
+                </select>
+              </div>
+              <button type="submit" class="mcp-btn">Call add_task</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tab: Calendar -->
+        <section class="tab-content" id="tab-calendar">
+          <div class="panel-header">
+            <h2>Daily Schedule Optimizer</h2>
+            <p>Life Scheduler Agent syncs tasks with breaks and lunch blocks to protect mental health and maintain focus.</p>
+          </div>
+
+          <div class="calendar-layout glass-card">
+            <div class="calendar-header-row">
+              <div>Time Block</div>
+              <div>Scheduled Event</div>
+              <div>Classification</div>
+              <div>Duration</div>
+            </div>
+            <div class="calendar-body" id="calendar-body">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Quizzes -->
+        <section class="tab-content" id="tab-quizzes">
+          <div class="panel-header">
+            <h2>Active Recall Study Center</h2>
+            <p>Generated dynamically by the Exam Agent calling the MCP tool <code>generate_study_deck</code>.</p>
+          </div>
+
+          <div class="quiz-container">
+            <div class="study-deck-selector glass-card">
+              <h3>Load/Generate Study Topic</h3>
+              <div class="topic-trigger-box">
+                <input type="text" id="custom-topic-input" placeholder="Enter topic (e.g. cryptography, networking)">
+                <button id="load-topic-btn" class="mcp-btn">Generate Study Deck</button>
+              </div>
+            </div>
+
+            <div class="flashcards-layout" id="flashcards-layout">
+              <div class="empty-state">No study topic active. Input a topic above or use the Agent Console.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Security -->
+        <section class="tab-content" id="tab-security">
+          <div class="panel-header">
+            <h2>Security Threat Monitor & Logs</h2>
+            <p>Real-time audit trailing of system input checks, command executions, and sanitization metrics.</p>
+          </div>
+
+          <div class="security-stats-grid">
+            <div class="sec-stat-card glass-card">
+              <span class="sec-stat-title">Threats Intercepted</span>
+              <span class="sec-stat-number" id="threats-count">0</span>
+            </div>
+            <div class="sec-stat-card glass-card">
+              <span class="sec-stat-title">Validation Checks</span>
+              <span class="sec-stat-number" id="checks-count">1</span>
+            </div>
+            <div class="sec-stat-card glass-card">
+              <span class="sec-stat-title">Sandbox Isolation</span>
+              <span class="sec-stat-number secure-color">100%</span>
+            </div>
+          </div>
+
+          <div class="audit-logs-section glass-card">
+            <h3>Live Security Audit Trail (tasks://security-status)</h3>
+            <div class="audit-logs-table-wrapper">
+              <table class="audit-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Action</th>
+                    <th>Audit Details</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="security-logs-body">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
