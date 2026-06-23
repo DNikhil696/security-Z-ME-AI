@@ -6,8 +6,6 @@ Here is a clean, visually structured breakdown of your components using emojis t
 
 # 🚀 Architecture Overview
 
-<img width="943" height="625" alt="Image" src="https://github.com/user-attachments/assets/19912360-8e95-4cb6-ba70-e6cbc21535ce" />
-
 ## 🤖 1. ADK Multi-Agent System
 
 A collaborative ecosystem where specialized AI agents work together as a team rather than relying on a single, massive model.
@@ -17,6 +15,7 @@ A collaborative ecosystem where specialized AI agents work together as a team ra
 * ⚡ **Specialization:** One agent might code, another reviews, and a third deploys.
 
 ---
+<img width="943" height="625" alt="Image" src="https://github.com/user-attachments/assets/19912360-8e95-4cb6-ba70-e6cbc21535ce" />
 
 ## 🔌 2. Model Context Protocol (MCP) Server
 
